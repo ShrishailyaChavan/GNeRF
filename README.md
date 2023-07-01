@@ -61,26 +61,3 @@ python eval.py --ckpt PATH/TO/CKPT.pt --gt PATH/TO/GT.json
 where you replace PATH/TO/CKPT.pt with your trained model checkpoint, and PATH/TO/GT.json with the json file in NeRF-Synthetic
 dataset. Then, just run the  [ATE toolbox](https://github.com/uzh-rpg/rpg_trajectory_evaluation) on the `evaluation` directory.
 
-## List of Possible Improvements
-
-For future work, we recommend the following aspects to further improve the performance and stability:
-
-- **Replace the single NeRF network with [mip-NeRF](https://jonbarron.info/mipnerf/) network**: The use of separate MLPs
-  in the original NeRF paper is a key detail to represent thin objects in the scene, if you retrain the original NeRF
-  with only one MLP you will find a decrease in performance. While in our work, a single MLP network is necessary to
-  keep the coarse image and fine image aligned. The cone casting and IPE features of mip-NeRF allow it to explicitly
-  encode scale into the input features and thereby enable an MLP to learn a multiscale representation of the scene.
-
-- **Combine [BARF](https://arxiv.org/abs/2104.06405) to further overcome local minima**: The BARF method shows that
-  susceptibility to noise from positional encoding affects the basin of attraction for registration and present a
-  coarse-to-fine registration strategy.
-
-- **Combine [NeRF++](https://arxiv.org/abs/2010.07492) to represent the background in real scenes with complex
-  background**.
-
-
-        year = {2021}
-    }
-
-Some code snippets are borrowed from [GRAF](https://github.com/autonomousvision/graf)
-and [nerf_pl](https://github.com/kwea123/nerf_pl.git). Thanks for these great projects.
