@@ -6,19 +6,6 @@ written in [Pytorch](https://pytorch.org/).
 
 ![architecture](./images/architecture.png)
 
-## Abstract
-
-We introduce GNeRF, a framework to marry Generative Adversarial Networks (GAN) with Neural Radiance Field (NeRF) 
-reconstruction for the complex scenarios with unknown and even randomly initialized camera poses. Recent NeRF-based
-advances have gained popularity for remarkable realistic novel view synthesis. However, most of them heavily rely on
-accurate camera poses estimation, while few recent methods can only optimize the unknown camera poses in roughly
-forward-facing scenes with relatively short camera trajectories and require rough camera poses initialization.
-Differently, our GNeRF only utilizes randomly initialized poses for complex outside-in scenarios. We propose a novel
-two-phases end-to-end framework. The first phase takes the use of GANs into the new realm for optimizing coarse camera
-poses and radiance fields jointly, while the second phase refines them with additional photometric loss. We overcome
-local minima using a hybrid and iterative optimization scheme. Extensive experiments on a variety of synthetic and
-natural scenes demonstrate the effectiveness of GNeRF. More impressively, our approach outperforms the baselines
-favorably in those scenes with repeated patterns or even low textures that are regarded as extremely challenging before.
 
 ## Installation
 
@@ -91,14 +78,7 @@ For future work, we recommend the following aspects to further improve the perfo
 - **Combine [NeRF++](https://arxiv.org/abs/2010.07492) to represent the background in real scenes with complex
   background**.
 
-## Citation
 
-If you find our code or paper useful, please consider citing
-
-    @InProceedings{meng2021gnerf,
-        author = {Meng, Quan and Chen, Anpei and Luo, Haimin and Wu, Minye and Su, Hao and Xu, Lan and He, Xuming and Yu, Jingyi},
-        title = {{G}{N}e{R}{F}: {G}{A}{N}-based {N}eural {R}adiance {F}ield without {P}osed {C}amera},
-        booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
         year = {2021}
     }
 
