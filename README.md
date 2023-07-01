@@ -1,7 +1,7 @@
 # GNeRF
 
-This repository contains official code for the ICCV 2021 paper:
-[GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/abs/2103.15606). This implementation is
+This repository contains the implementation of following paper:
+[GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/abs/2103.15606). The code is
 written in [Pytorch](https://pytorch.org/).
 
 ![architecture](./images/architecture.png)
@@ -9,7 +9,7 @@ written in [Pytorch](https://pytorch.org/).
 
 ## Installation
 
-We recommand using [Anaconda](https://www.anaconda.com/) to setup the environment. Run the following commands:
+It is recommended to use [Anaconda](https://www.anaconda.com/) to setup the environment. Run the following commands:
 
 ```
 # Create a conda environment named 'gnerf'
@@ -24,8 +24,7 @@ pip install -r requirements.txt
 
 ### Blender
 
-Download from the [NeRF official Google Drive](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1)
-. Please download and unzip `nerf_synthetic.zip`.
+Download from the [NeRF official Google Drive](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1) (Download nerf_synthetic.zip)
 
 ### DTU
 
